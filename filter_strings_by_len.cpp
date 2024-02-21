@@ -10,3 +10,14 @@ std::string getInput() {
     std::getline(std::cin, line);
     return line;
 }
+// Функция для разделения строки на массив строк
+void splitString(const std::string& inputStr, std::vector<std::string>& result) {
+    std::istringstream iss(inputStr);
+    std::string token;
+    while (std::getline(iss, token, ',')) {
+        // Удаляем пробелы в начале и конце строки
+        token.erase(0, token.find_first_not_of(' '));
+        token.erase(token.find_last_not_of(' ') + 1);
+        result.push_back(token);
+    }
+}
