@@ -30,3 +30,18 @@ void filterStringsByLength(const std::vector<std::string>& input, std::vector<st
         }
     }
 }
+
+// Функция для вывода результата на экран
+void printResult(const std::vector<std::string>& result) {
+    std::cout << "\nРезультат:\n";
+    bool firstElementPrinted = false;
+    for (const auto& s : result) {
+        if (!firstElementPrinted) {
+            firstElementPrinted = true;
+        } else {
+            std::cout << ',';
+        }
+        std::cout << s;
+    }
+    std::cout << '\n';
+}
