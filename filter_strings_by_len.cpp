@@ -21,3 +21,12 @@ void splitString(const std::string& inputStr, std::vector<std::string>& result) 
         result.push_back(token);
     }
 }
+
+// Функция для фильтрации строк по длине и формирования нового массива
+void filterStringsByLength(const std::vector<std::string>& input, std::vector<std::string>& result) {
+    for (const auto& str : input) {
+        if (str.length() <= 3) {
+            result.push_back(str);
+        }
+    }
+}
